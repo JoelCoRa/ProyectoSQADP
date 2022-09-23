@@ -1,0 +1,78 @@
+
+
+
+
+// $green: #00f260;
+$blue: #0575e6;
+// $body-bg:  linear-gradient(to right, $green, $blue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+$secondary: #f2994a;
+$succes: #21b021;
+$primary: #f00;
+$light: rgb(199, 190, 190);
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+}
+.navbar{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+footer .navbar{
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+@include media-breakpoint-up(md){
+    .nav-link:hover{
+        text-decoration: underline;
+        transition: 0.3s ease-out;
+        border-radius: 2rem;
+        transform: translateY(-5px);
+    }
+}
+
+.slide{
+    margin: 1rem auto;
+    width: 95%;
+    
+}
+.slide img{
+    height: 40vh;
+}
+@include media-breakpoint-up(md){
+    .slide img{
+        height: 50vh;
+    }
+}
+@include media-breakpoint-up(lg){
+    .slide img{
+        height: 80vh;
+    }
+}
+.card{
+    width: 90%;    
+    margin: 0 auto 2rem auto;
+    // margin-bottom: 2rem;
+}
+@include media-breakpoint-up(md){
+    .card{
+        width: 60%;        
+    }
+}
+@include media-breakpoint-up(lg){
+    .card{
+        width: 100%;        
+    }
+}
+.card img{
+    height: 22vh;
+}
+.footer{
+    background-color: #f00;
+}
+
+
+
+
