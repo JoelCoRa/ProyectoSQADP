@@ -5,9 +5,10 @@
 // $green: #00f260;
 $blue: #0575e6;
 // $body-bg:  linear-gradient(to right, $green, $blue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-$secondary: #f2994a;
+$secondary: #403f63;
 $succes: #21b021;
-$primary: #f00;
+$primary: #f01;
+// $warning: rgb(229, 255, 0);;
 $light: rgb(199, 190, 190);
 
 
@@ -15,14 +16,16 @@ $light: rgb(199, 190, 190);
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 body{
-    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    background: linear-gradient(to right, #ffefba, #ffffff);
 }
-.navbar{
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+// .navbar{
+//     // background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+// }
+.sombra{
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75));
 }
-footer .navbar{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-}
+
 
 @include media-breakpoint-up(md){
     .nav-link:hover{
@@ -33,46 +36,135 @@ footer .navbar{
     }
 }
 
-.slide{
-    margin: 1rem auto;
-    width: 95%;
+.banner{
+    position: relative;
+    .texto-osvald{    
+        font-family: 'Oswald',sans-serif;    
+        &:nth-child(1){
+            position: absolute;
+            top: 15%;
+            left: 2%;
+            font-size: 2rem;
+            filter: drop-shadow(3px 3px 3px rgba(240, 5, 5, 0.75));
+            // margin: 2rem auto; 
+            @include media-breakpoint-up(sm){
+                top: 10%;
+                left: 1%;
+                font-size: 3.2rem;
+            }
+            @include media-breakpoint-up(md){
+                top: 10%;       
+                font-size: 4.3rem;
+            }       
+            @include media-breakpoint-up(lg){
+                font-size: 5.3rem;
+            }
+            @include media-breakpoint-up(xl){
+                font-size: 7rem;
+            }
+        }
+        span{
+            font-size: 2rem;
+            @include media-breakpoint-up(lg){
+                font-size: 3rem;
+            }
+        }    
+    }
+    .desc-banner{
+        position: absolute;
+        top: 20%;
+        right: 1%;
+        font-size: 1rem;
+        filter: drop-shadow(3px 3px 3px rgba(255, 196, 0, 0.75));
+    
+        @include media-breakpoint-up(sm){
+            font-size: 1.4rem;
+        }
+        @include media-breakpoint-up(md){
+            right: 2.5%;
+            font-size: 1.8rem;  
+        }    
+    
+        @include media-breakpoint-up(lg){
+            right: 3%;
+            font-size: 2.2rem;         
+        }
+        @include media-breakpoint-up(xl){
+           
+            font-size: 2.5rem;         
+        }    
+    }
     
 }
-.slide img{
-    height: 40vh;
-}
-@include media-breakpoint-up(md){
-    .slide img{
-        height: 50vh;
+
+// Carousel
+.slide{
+    margin: 1rem auto;
+    width: 100%;
+    img{
+        height: 40vh                
     }
-}
-@include media-breakpoint-up(lg){
-    .slide img{
-        height: 80vh;
+    @include media-breakpoint-up(sm){
+        img{
+            height: 45vh;
+        }
+    }    
+    @include media-breakpoint-up(md){
+        img{
+            height: 50vh;
+        }
     }
+    @include media-breakpoint-up(lg){
+        img{
+            height: 90vh;
+        }
+    }    
 }
+
+
 .card{
     width: 90%;    
     margin: 0 auto 2rem auto;
     // margin-bottom: 2rem;
-}
-@include media-breakpoint-up(md){
-    .card{
-        width: 60%;        
+    @include media-breakpoint-up(md){
+        width: 60%; 
+    }
+    @include media-breakpoint-up(lg){
+        width: 100%;
+    }
+    img{
+        height: 22vh;
     }
 }
-@include media-breakpoint-up(lg){
-    .card{
-        width: 100%;        
-    }
+
+
+
+
+.fondo-textura{
+    background-image: url(../imagenes/cards/denim.webp) ;
 }
-.card img{
-    height: 22vh;
-}
-.footer{
-    background-color: #f00;
+.bg-custom{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    // background: rgb(189, 187, 187)
 }
 
+.mapa-footer{
+    max-width: 1rem;
+    
+}
+
+.logo-footer{
+    width: 10rem;
+    filter: invert(100%);
+}
+
+.seccion{
+    background-image: url(../imagenes/fondo-secciones.png);
+}
 
 
-
+.servicio{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.7rem;
+    text-shadow: 2px 2px 4px  black;
+}
