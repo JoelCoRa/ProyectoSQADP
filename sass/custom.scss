@@ -10,24 +10,41 @@ $succes: #21b021;
 $primary: #f01;
 // $warning: rgb(229, 255, 0);;
 $light: rgb(199, 190, 190);
+$transition-collapse: height .40s ease;
 
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+// Body
+
 body{
     background: linear-gradient(to right, #ffefba, #ffffff);
+    // background:  linear-gradient(to right, #616161, #9bc5c3);
 }
 
-// .navbar{
-//     // background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+// Navegacion
+.navbar{
+    background: #84b0db;
+    -webkit-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.75);
+}
+// .logo{
+//     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75));
 // }
-.sombra{
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.75));
+.btn-dark-mode{
+    background: none;
+    width: 4rem;
+    &:hover{
+        filter: invert(50%);
+        transform: translateY(-10%);
+        transition: 0.5s ease-in;
+    }    
 }
 
 
-@include media-breakpoint-up(md){
+@include media-breakpoint-up(lg){
     .nav-link:hover{
         text-decoration: underline;
         transition: 0.3s ease-out;
@@ -36,6 +53,7 @@ body{
     }
 }
 
+// Banner
 .banner{
     position: relative;
     .texto-osvald{    
@@ -89,15 +107,18 @@ body{
             right: 3%;
             font-size: 2.2rem;         
         }
-        @include media-breakpoint-up(xl){
-           
+        @include media-breakpoint-up(xl){           
             font-size: 2.5rem;         
         }    
     }
     
 }
 
-// Carousel
+// Main
+.titulo-seccion{
+    font-family: 'Bebas Neue', cursive;
+}
+// Conocenos
 .slide{
     margin: 1rem auto;
     width: 100%;
@@ -121,50 +142,141 @@ body{
     }    
 }
 
+// Servicios
+.servicios{
+    .servicio{
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.7rem;
+        text-shadow: 2px 2px 4px  black;
+    }
+}
 
+
+
+
+// Adopta
+.btn-adopcion{
+    background-color: #0575e6;
+    padding: 1rem;
+    font-family: Oswald, sans-serif;
+    display: inline-block;
+    border-radius: 2rem;
+    border: none;
+    -webkit-box-shadow: 10px 9px 10px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 9px 10px -5px rgba(0,0,0,0.75);
+    box-shadow: 10px 9px 10px -5px rgba(0,0,0,0.75);      
+    &:hover{
+        background-color: #470b07;
+        transform: translateY(-10%);
+        transition: 0.5s ease-in-out;
+        -webkit-box-shadow: 6px 4px 6px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 4px 6px 1px rgba(0,0,0,0.75);
+        box-shadow: 6px 4px 6px 1px rgba(0,0,0,0.75);
+    }
+}
 .card{
-    width: 90%;    
     margin: 0 auto 2rem auto;
-    // margin-bottom: 2rem;
-    @include media-breakpoint-up(md){
-        width: 60%; 
-    }
-    @include media-breakpoint-up(lg){
-        width: 100%;
-    }
-    img{
-        height: 22vh;
-    }
+    border: none;
+    background: rgb(170, 200, 224);
+    -webkit-box-shadow: 3px 6px 17px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 6px 17px 2px rgba(0,0,0,0.75);
+    box-shadow: 3px 6px 17px 2px rgba(0,0,0,0.75);
 }
 
-
-
-
-.fondo-textura{
-    background-image: url(../imagenes/cards/denim.webp) ;
+.number-list{
+    background-color: rgb(70, 19, 19);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    width: 3rem;
+    height: 3rem;
 }
-.bg-custom{
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    // background: rgb(189, 187, 187)
-}
 
-.mapa-footer{
-    max-width: 1rem;
+// Footer
+footer{
+    -webkit-box-shadow: 0px -3px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -3px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px -3px 5px -1px rgba(0,0,0,0.75);
+    .bg-footer{
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        background: rgb(136, 46, 46)        
+    }
+    p, h3{
+        color: black;
+    }
+    .mapa-footer{
+        max-width: 1rem;    
+    }
+    .logo-footer{
+        width: 10rem;
+        // filter: invert(100%);
+    }
+    .ref-foot{
+        list-style-type: none;
+        padding-left: 0;    
+    }   
+    .link-foot{ 
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-family: Oswald, sans-serif;        
+        &:hover{
+            text-decoration: underline;
+            color: rgb(247, 247, 247);    
+        }   
+    }
+    .link-foot-rs svg{
+        max-height: 2rem;     
+        margin-bottom: 2rem;   
+    }
     
 }
 
-.logo-footer{
-    width: 10rem;
-    filter: invert(100%);
-}
+// DarkMode
+.dark-mode{    
+    background: linear-gradient(to right, #232526, #414345);
+    transition: 1s ease-in-out;
+    p, a{
+        color: white;
+    }
+    .titulo-seccion, h3, h4, h5, h6{
+        color: rgb(170, 165, 165);
+    }
+    .logo, .logo-footer{
+        filter: invert(100%);
+    }
+    .navbar{
+        background: #304050;        
+        @include media-breakpoint-up(lg){
+            .nav-link:hover{
+                color: rgb(146, 146, 146);
+                text-decoration: underline;
+                transition: 0.3s ease-out;
+                border-radius: 2rem;
+                transform: translateY(-5px);
+            }
+        }
+    }
+    .btn-dark-mode, i{
+        filter: invert(100%);
+    }    
+    .servicio{
+        color: white;
+    }
+    .card{
+        background: rgb(31, 51, 66);
+    }
+    .bg-footer{
+        background: rgb(65, 19, 19)
+    }
+    footer{
+        .logo-footer{
 
-.seccion{
-    background-image: url(../imagenes/fondo-secciones.png);
-}
-
-
-.servicio{
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.7rem;
-    text-shadow: 2px 2px 4px  black;
+        }
+        .link-foot-rs svg{
+            filter: invert(100%);
+        }
+    }
+    
+    
 }

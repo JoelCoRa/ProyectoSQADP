@@ -3217,7 +3217,7 @@ textarea.form-control-lg {
 .collapsing {
   height: 0;
   overflow: hidden;
-  transition: height 0.35s ease;
+  transition: height 0.4s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .collapsing {
@@ -10933,11 +10933,22 @@ body {
   background: linear-gradient(to right, #ffefba, #ffffff);
 }
 
-.sombra {
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.75));
+.navbar {
+  background: #84b0db;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.75);
 }
 
-@media (min-width: 768px) {
+.btn-dark-mode {
+  background: none;
+  width: 4rem;
+}
+.btn-dark-mode:hover {
+  filter: invert(50%);
+  transform: translateY(-10%);
+  transition: 0.5s ease-in;
+}
+
+@media (min-width: 992px) {
   .nav-link:hover {
     text-decoration: underline;
     transition: 0.3s ease-out;
@@ -11019,6 +11030,10 @@ body {
   }
 }
 
+.titulo-seccion {
+  font-family: "Bebas Neue", cursive;
+}
+
 .slide {
   margin: 1rem auto;
   width: 100%;
@@ -11042,47 +11057,116 @@ body {
   }
 }
 
-.card {
-  width: 90%;
-  margin: 0 auto 2rem auto;
-}
-@media (min-width: 768px) {
-  .card {
-    width: 60%;
-  }
-}
-@media (min-width: 992px) {
-  .card {
-    width: 100%;
-  }
-}
-.card img {
-  height: 22vh;
-}
-
-.fondo-textura {
-  background-image: url(../imagenes/cards/denim.webp);
-}
-
-.bg-custom {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-}
-
-.mapa-footer {
-  max-width: 1rem;
-}
-
-.logo-footer {
-  width: 10rem;
-  filter: invert(100%);
-}
-
-.seccion {
-  background-image: url(../imagenes/fondo-secciones.png);
-}
-
-.servicio {
+.servicios .servicio {
   font-family: "Raleway", sans-serif;
   font-size: 1.7rem;
   text-shadow: 2px 2px 4px black;
+}
+
+.btn-adopcion {
+  background-color: #0575e6;
+  padding: 1rem;
+  font-family: Oswald, sans-serif;
+  display: inline-block;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 10px 9px 10px -5px rgba(0, 0, 0, 0.75);
+}
+.btn-adopcion:hover {
+  background-color: #470b07;
+  transform: translateY(-10%);
+  transition: 0.5s ease-in-out;
+  box-shadow: 6px 4px 6px 1px rgba(0, 0, 0, 0.75);
+}
+
+.card {
+  margin: 0 auto 2rem auto;
+  border: none;
+  background: rgb(170, 200, 224);
+  box-shadow: 3px 6px 17px 2px rgba(0, 0, 0, 0.75);
+}
+
+.number-list {
+  background-color: rgb(70, 19, 19);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  width: 3rem;
+  height: 3rem;
+}
+
+footer {
+  box-shadow: 0px -3px 5px -1px rgba(0, 0, 0, 0.75);
+}
+footer .bg-footer {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: rgb(136, 46, 46);
+}
+footer p, footer h3, footer .h3 {
+  color: black;
+}
+footer .mapa-footer {
+  max-width: 1rem;
+}
+footer .logo-footer {
+  width: 10rem;
+}
+footer .ref-foot {
+  list-style-type: none;
+  padding-left: 0;
+}
+footer .link-foot {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: Oswald, sans-serif;
+}
+footer .link-foot:hover {
+  text-decoration: underline;
+  color: rgb(247, 247, 247);
+}
+footer .link-foot-rs svg {
+  max-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dark-mode {
+  background: linear-gradient(to right, #232526, #414345);
+  transition: 1s ease-in-out;
+}
+.dark-mode p, .dark-mode a {
+  color: white;
+}
+.dark-mode .titulo-seccion, .dark-mode h3, .dark-mode .h3, .dark-mode h4, .dark-mode .h4, .dark-mode h5, .dark-mode .h5, .dark-mode h6, .dark-mode .h6 {
+  color: rgb(170, 165, 165);
+}
+.dark-mode .logo, .dark-mode .logo-footer {
+  filter: invert(100%);
+}
+.dark-mode .navbar {
+  background: #304050;
+}
+@media (min-width: 992px) {
+  .dark-mode .navbar .nav-link:hover {
+    color: rgb(146, 146, 146);
+    text-decoration: underline;
+    transition: 0.3s ease-out;
+    border-radius: 2rem;
+    transform: translateY(-5px);
+  }
+}
+.dark-mode .btn-dark-mode, .dark-mode i {
+  filter: invert(100%);
+}
+.dark-mode .servicio {
+  color: white;
+}
+.dark-mode .card {
+  background: rgb(31, 51, 66);
+}
+.dark-mode .bg-footer {
+  background: rgb(65, 19, 19);
+}
+.dark-mode footer .link-foot-rs svg {
+  filter: invert(100%);
 }/*# sourceMappingURL=custom.css.map */

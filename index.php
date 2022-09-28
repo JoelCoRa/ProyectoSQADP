@@ -1,20 +1,12 @@
   <?php 
-    include './templates/header.php'
-  ?>            
-      
-      <section class="header rounded-start mb-3">
-        <div class="text-center banner">      
-          <img src="./imagenes/pets-banner2.jpg" alt="" class="w-100 img-banner">
-          <div class="texto-banner">
-            <h2 class="texto-osvald bienvenida">Bienvenido <br> a  Mango<span>&#169;</span></h2>
-            <p class="texto-osvald fst-italic desc-banner">Somos una página <br> dedicada a la adopción <br> de mascotas</p>
-          </div>        
-        </div>        
-      </section>
+    include './templates/header.php';  
+    include './templates/banner.php';
+  ?>       
 
       <main class="container text-center mb-3 mt-3">
-        <section class="conocenos pt-3"> <!--Conócenos-->
-          <h2 class="texto-osvald fs-1 seccion" id="conocenos">Conócenos</h2>
+      <!--Conócenos-->
+        <section class="conocenos pt-3"> 
+          <h2 class="titulo-seccion fs-1 seccion" id="conocenos">Conócenos</h2>
           <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -28,40 +20,40 @@
               <div class="carousel-item active" data-bs-interval="10000">
                 <img src="./imagenes/Carousel/1.jpg" class="d-block w-100 rounded"alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Conócenos</h3>
-                  <p>Somos una página que te ayuda a adoptar a tu próximo mejor amigo</p>
+                  <h3 class="text-black">Conócenos</h3>
+                  <p class="text-black">Somos una página que te ayuda a adoptar a tu próximo mejor amigo</p>
                 </div>
               </div>
 
               <div class="carousel-item" data-bs-interval="2000">
                 <img src="./imagenes/Carousel/2.jpg" class="d-block w-100 rounded" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Ház una Donación</h3>
-                  <p>Apoya a la causa, realizando una donación que no afecte a tu bolsillo.</p>
+                  <h3 class="text-black">Ház una Donación</h3>
+                  <p class="text-black">Apoya a la causa, realizando una donación que no afecte a tu bolsillo.</p>
                 </div>
               </div>
 
               <div class="carousel-item">
                 <img src="./imagenes/Carousel/3.jpg" class="d-block w-100 rounded" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Compra</h3>
-                  <p>Puedes pasar a nuestra tienda online para adquirir productos para tu mejor amigo</p>
+                  <h3 class="text-black">Compra</h3>
+                  <p class="text-black">Puedes pasar a nuestra tienda online para adquirir productos para tu mejor amigo</p>
                 </div>
               </div>
 
               <div class="carousel-item">
                 <img src="./imagenes/Carousel/4.jpg" class="d-block w-100 rounded" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Compra</h3>
-                  <p>Puedes pasar a nuestra tienda online para adquirir productos para tu mejor amigo</p>
+                  <h3 class="text-black">Compra</h3>
+                  <p class="text-black">Puedes pasar a nuestra tienda online para adquirir productos para tu mejor amigo</p>
                 </div>
               </div>
 
               <div class="carousel-item">
                 <img src="./imagenes/Carousel/5.jpg" class="d-block w-100 rounded" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Compra</h3>
-                  <p>Puedes pasar a nuestra tienda online para adquirir productos para tu mejor amigo</p>
+                  <h3 class="text-black">Compra</h3>
+                  <p class="text-black">Puedes pasar a nuestra tienda online para adquirir productos para tu mejor amigo</p>
                 </div>
               </div>
 
@@ -76,10 +68,10 @@
             </button>
           </div>
         </section>
-
         
-        <section class="servicios"> <!-- Servicios-->
-        <h2 class="texto-osvald fs-1 seccion pt-3" id="servicios">Servicios</h2>
+        <!-- Servicios-->
+        <section class="servicios"> 
+          <h2 class="titulo-seccion fs-1 seccion pt-3" id="servicios">Servicios</h2>
           <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-3">
               <p class="text-warning servicio fw-bold">Hospital Veterinario</p> 
@@ -111,13 +103,12 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tempore veniam non enim officiis, soluta rem consequatur ipsa, placeat iure quibusdam, officia aliquid quod consectetur sit voluptates ratione doloremque beatae?</p>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3">
-              <p class="text-warning servicio fw-bold">Tienda Online</p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <p class="text-warning servicio fw-bold">Refugio</p>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff4500" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <circle cx="6" cy="19" r="2" />
-                <circle cx="17" cy="19" r="2" />
-                <path d="M17 17h-11v-14h-2" />
-                <path d="M6 5l14 1l-1 7h-13" />
+                <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
               </svg>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo corrupti doloremque veniam ratione! Voluptatum, accusamus sint aperiam, harum dignissimos enim mollitia illum delectus quos, eaque maiores at. Reprehenderit, consectetur neque.</p>
             </div>            
@@ -125,6 +116,14 @@
 
           
         </section>
+
+        <!-- Dona -->
+        <section class="dona">
+        <h2 class="titulo-seccion fs-1 seccion pt-3" id="dona">Dona</h2>
+        </section>
+
+
+
         <!-- <div class="row justify-content-lg-around">
           <div class="col-12 col-lg-3">
             <div class="card border-0 fondo-textura">
